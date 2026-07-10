@@ -1,0 +1,403 @@
+/* Variables de color de la marca ISALMONTE */
+:root {
+    --fondo-oscuro: #111111; /* Un gris-negro profundo, mejor que el negro puro */
+    --texto-claro: #f0f0f0;  /* Blanco roto para no cansar la vista al leer */
+    --purpura-isalmonte: #887299; /* El color extraído de tu logo */
+    --bronce-acento: #c48b62; /* El color de acento que combina perfectamente */
+}
+
+/* Configuraciones generales */
+body {
+    background-color: var(--fondo-oscuro);
+    color: var(--texto-claro);
+    font-family: system-ui, -apple-system, sans-serif; /* Fuente moderna y limpia por defecto */
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+  Nota: Más adelante podemos agregar tu imagen del banner 
+  como una textura sutil de fondo si decides que le aporta al diseño. 
+*/
+
+
+/* Estilos de la barra de navegación */
+#miNavbar {
+    background-color: rgba(17, 17, 17, 0.90); /* Fondo oscuro con ligera transparencia */
+    backdrop-filter: blur(8px); /* Efecto de cristal moderno */
+    border-bottom: 1px solid rgba(136, 114, 153, 0.2); /* Línea sutil usando tu púrpura */
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+/* Estilo del Logo */
+.logo-marca {
+    color: var(--purpura-isalmonte) !important;
+    font-family: "Times New Roman", Times, serif; /* Simulando la fuente elegante de tu imagen */
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+/* Estilo de los enlaces */
+.nav-link {
+    color: var(--texto-claro) !important;
+    font-size: 1rem;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre los enlaces */
+.nav-link:hover {
+    color: var(--bronce-acento) !important; /* Usamos el color bronce de acento */
+}
+
+/* Color y tamaño del ícono de menú en celulares */
+.icono-menu {
+    color: var(--purpura-isalmonte);
+    font-size: 2rem;
+}
+
+/* Quitamos el borde por defecto de Bootstrap al botón de menú en móviles */
+.navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+    padding: 0;
+}
+
+
+/* ESTILOS SOBRE MI  */
+
+/* --- SECCIÓN HERO / SOBRE MÍ --- */
+
+.hero-section {
+    min-height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    padding-top: 80px; /* Compensa el espacio del menú fijo */
+    background: radial-gradient(circle at 80% 20%, rgba(136, 114, 153, 0.1) 0%, transparent 40%); /* Un brillo muy sutil color ISALMONTE de fondo */
+}
+
+/* Etiqueta pequeña superior */
+.etiqueta-carrera {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--bronce-acento);
+    border: 1px solid var(--bronce-acento);
+    padding: 5px 15px;
+    border-radius: 50px;
+}
+
+/* Título principal */
+.hero-section h1 {
+    color: var(--texto-claro);
+    line-height: 1.2;
+}
+
+.texto-resaltado {
+    color: var(--purpura-isalmonte);
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+}
+
+/* Descripción */
+.descripcion-hero {
+    color: #a0a0a0; /* Un gris un poco más oscuro para que el título destaque más */
+    max-width: 600px;
+    font-size: 1.15rem;
+}
+
+/* Botón Principal */
+.btn-principal {
+    background-color: var(--purpura-isalmonte);
+    color: var(--fondo-oscuro);
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 4px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-principal:hover {
+    background-color: var(--bronce-acento);
+    color: var(--fondo-oscuro);
+    transform: translateY(-2px); /* Pequeño salto al pasar el mouse */
+}
+
+/* Ícono decorativo gigante */
+.icono-gigante {
+    font-size: 12rem;
+    color: rgba(136, 114, 153, 0.15); /* Púrpura muy transparente como marca de agua */
+}
+
+
+/* --- SECCIÓN SOBRE MÍ (PERFIL CON FOTO) --- */
+.seccion-perfil {
+    background-color: var(--fondo-oscuro);
+}
+
+.titulo-seccion {
+    color: var(--texto-claro);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.texto-descripcion {
+    color: #a0a0a0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Efecto moderno para el contenedor de tu foto */
+.contenedor-foto {
+    position: relative;
+    display: inline-block;
+}
+
+/* El marco púrpura decorativo detrás de la foto */
+.contenedor-foto::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--purpura-isalmonte);
+    border-radius: 4px;
+    z-index: 0;
+    transition: all 0.3s ease;
+}
+
+.contenedor-foto:hover::before {
+    top: 10px;
+    left: 10px;
+}
+
+/* Estilo de la imagen */
+.foto-perfil {
+    position: relative;
+    z-index: 1;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    width: 100%;
+    max-width: 350px;
+    object-fit: cover;
+    aspect-ratio: 4/5; /* Mantiene un formato retrato elegante */
+}
+
+
+
+/* --- SECCIÓN REEL / AUDIOVISUAL --- */
+.seccion-oscura {
+    /* Un tono apenas más claro que el fondo base para crear contraste entre secciones */
+    background-color: #151515; 
+    border-top: 1px solid rgba(136, 114, 153, 0.1);
+    border-bottom: 1px solid rgba(136, 114, 153, 0.1);
+}
+
+/* Contenedor del video responsivo (16:9) */
+.contenedor-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(136, 114, 153, 0.3);
+}
+
+.contenedor-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Lista de herramientas técnicas */
+.lista-herramientas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-herramientas li {
+    color: #c0c0c0;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.icono-lista {
+    color: var(--purpura-isalmonte);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+
+/* --- SECCIÓN PROYECTOS (WEB) --- */
+.seccion-proyectos {
+    background-color: var(--fondo-oscuro);
+}
+
+/* Caja del proyecto destacado */
+.caja-proyecto {
+    background-color: #151515;
+    border: 1px solid rgba(136, 114, 153, 0.15);
+    border-radius: 12px;
+    padding: 30px 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caja-proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+    border-color: rgba(196, 139, 98, 0.3); /* Un toque de tu color bronce al pasar el mouse */
+}
+
+/* Imagen del proyecto */
+.imagen-proyecto-wrapper {
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.imagen-proyecto {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.caja-proyecto:hover .imagen-proyecto {
+    transform: scale(1.03); /* Ligero zoom al pasar el mouse */
+}
+
+/* Etiquetas (Pills) del Stack Tecnológico */
+.etiqueta-tecnologia {
+    background-color: rgba(136, 114, 153, 0.1);
+    color: var(--purpura-isalmonte);
+    border: 1px solid rgba(136, 114, 153, 0.3);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Botón Outline para el Repositorio */
+.btn-outline-purpura {
+    color: var(--texto-claro);
+    border: 1px solid var(--purpura-isalmonte);
+    background-color: transparent;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-outline-purpura:hover {
+    background-color: var(--purpura-isalmonte);
+    color: var(--fondo-oscuro);
+}
+
+
+/* --- ESTILOS DE BARRAS DE PROGRESO --- */
+.lista-progreso {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-progreso .nombre-herramienta {
+    color: var(--texto-claro);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.item-progreso .nombre-herramienta span {
+    color: var(--purpura-isalmonte);
+    font-size: 1.3rem;
+}
+
+.item-progreso .porcentaje {
+    color: var(--bronce-acento);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Configuramos la estructura base de la barra */
+.progress {
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Color y animación de llenado */
+.barra-purpura {
+    background-color: var(--purpura-isalmonte);
+    border-radius: 50px;
+    transition: width 1s ease-in-out;
+}
+
+
+
+/* --- BOTÓN DESCARGAR CV (ACENTO BRONCE) --- */
+.btn-bronce {
+    background-color: transparent;
+    color: var(--bronce-acento);
+    border: 2px solid var(--bronce-acento);
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none; /* Quita el subrayado por defecto de los enlaces */
+}
+
+.btn-bronce:hover {
+    background-color: var(--bronce-acento);
+    color: var(--fondo-oscuro);
+    transform: translateY(-2px); /* Pequeño salto elegante */
+}
+
+/* --- SECCIÓN CONTACTO SIMPLE --- */
+.contacto-item {
+    display: flex;
+    align-items: center;
+}
+
+.icono-contacto {
+    color: var(--purpura-isalmonte);
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+.redes-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.enlace-red {
+    color: var(--texto-claro);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    border-left: 2px solid var(--bronce-acento);
+    padding-left: 15px;
+}
+
+.enlace-red:hover {
+    color: var(--bronce-acento);
+}
+
+.botonFijo{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
